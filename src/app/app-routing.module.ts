@@ -4,7 +4,9 @@ import { TestDropdownComponent } from './test-dropdown/test-dropdown.component';
 
 
 const routes: Routes = [
-  { path: 'dropdown', component: TestDropdownComponent }
+  { path: 'dropdown', component: TestDropdownComponent },
+  { path: '',   redirectTo: '/dropdown', pathMatch: 'full' },
+  { path: '**', component: TestDropdownComponent }
 ];
 
 @NgModule({
